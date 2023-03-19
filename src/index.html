@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News-home</title>
+
+    <!-- favicon -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="./images/favicon_N-64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon_N-32.png"
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+
+  <body class="home">
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <header id="the-top">
+      <include src="./partials/header.html"></include>
+    </header>
+
+    <main>
+      <include src="./partials/categories.html"></include>
+
+      <!-- * Галерея карток -->
+      <div class="gallery">
+        <!-- Картки новин -->
+        <include src="./partials/gallery.html"></include>
+      </div>
+      <!-- */ Галерея карток -->
+      <include src="./partials/pagiination.html"></include>
+    </main>
+
+    <!-- <FOOTER> -->
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/scroll-to-up.html"></include>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./JS/mostFavorite.js"></script>
+  </body>
+</html>

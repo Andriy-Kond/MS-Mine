@@ -1,0 +1,158 @@
+.wrapper-calendar {
+  padding: 16px 16px 20px 16px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  background: var(--bg-menu);
+}
+
+.wrapper-calendar header {
+  display: flex;
+  width: 218px;
+  height: 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+  height: 17px;
+  align-items: center;
+}
+
+header .icons span {
+  display: flex;
+  width: 9px;
+  cursor: pointer;
+}
+
+// .icons span:last-child {
+//   margin-left: 33px;
+// }
+
+.icons svg {
+  height: 17px;
+}
+
+.current-date {
+  width: 83px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: center;
+  color: var(--clear-black);
+}
+
+.current-year {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 3px;
+  margin-right: 3px;
+  color: var(--clear-black);
+}
+
+header .month-box {
+  display: flex;
+  height: 17px;
+  align-items: center;
+}
+
+.icons-month {
+  cursor: pointer;
+  height: 17px;
+}
+
+.icons-month svg {
+  width: 9px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+}
+.calendar-box .weeks {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  padding: 0;
+  margin-top: 13px;
+  margin-bottom: 14px;
+  color: rgba(60, 60, 67, 0.3);
+  justify-content: space-around;
+}
+
+.calendar-box .weeks li {
+  width: 30px;
+}
+
+.calendar-box .days {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--clear-black);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar-box .days li {
+  position: relative;
+  width: calc(100% / 7);
+  color: var(--clear-black);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: var(--brand-light);
+}
+
+.days li::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 50%;
+  height: 26px;
+  width: 26px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: var(--brand-main);
+}
+
+.days li:not(.active):hover::before {
+  background: var(--hover-date);
+}
+
+.calendar_box {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 200ms;
+
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.calendar_isHidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(31px, -31px) scale(0.75);
+  transition: all 200ms;
+}
